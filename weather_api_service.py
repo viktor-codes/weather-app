@@ -1,9 +1,18 @@
 from datetime import datetime
 from typing import NamedTuple
 
+from enum import Enum
+
 from .gps_coordinates import Coordinates
 
 Celsius = int
+
+
+class WeatherType(Enum):
+    SUNNY = "Sunny"
+    RAINY = "Rainy"
+    CLOUDY = "Cloudy"
+    SNOWY = "Snowy"
 
 
 class Weather(NamedTuple):
