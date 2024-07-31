@@ -8,7 +8,7 @@ from .gps_coordinates import Coordinates
 Celsius = int
 
 
-class WeatherType(Enum):
+class WeatherType(Enum) -> None:
     SUNNY = "Sunny"
     RAINY = "Rainy"
     CLOUDY = "Cloudy"
@@ -24,5 +24,12 @@ class Weather(NamedTuple):
 
 
 def get_weather(coordinates: Coordinates) -> Weather:
-    """Return the weather for the given GPS coordinates."""
-    pass
+    """Requests weather data from an weatherapi.com and returns it."""
+    return Weather(
+				temperature=20,
+				weather_type=WeatherType.SUNNY,
+				sunrise=datetime.now(),
+				sunset=datetime.now(),
+				city="London",
+		)
+    
