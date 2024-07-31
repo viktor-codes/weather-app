@@ -4,10 +4,10 @@ from weather_formatter import format_weather
 
 
 def main():
-	coordinates = get_gps_coordinates()
-	weather = get_weather(coordinates)
-	print(format_weather(weather))
+    coordinates = get_gps_coordinates()
+    weather = get_weather(coordinates)
+    print(format_weather(weather))
 
- 
-if __name__ == '__main__':
-  main()
+
+if __name__ == "__main__":
+    main()
